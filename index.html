@@ -1,12 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=house-rules.pdf">
+    <title>Escape Route Ocean View - Reglas de la Casa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #003366;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .toggle {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .toggle button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #003366;
+            color: white;
+            border-radius: 5px;
+        }
+        .english-content {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleLanguage() {
+            var esContent = document.querySelectorAll('.spanish-content');
+            var enContent = document.querySelectorAll('.english-content');
+            var lang = document.documentElement.lang;
+
+            if (lang === "es") {
+                document.documentElement.lang = "en";
+                document.title = "Escape Route Ocean View - House Rules";
+                document.getElementById("toggleText").innerText = "Español";
+                esContent.forEach(el => el.style.display = "none");
+                enContent.forEach(el => el.style.display = "block");
+            } else {
+                document.documentElement.lang = "es";
+                document.title = "Escape Route Ocean View - Reglas de la Casa";
+                document.getElementById("toggleText").innerText = "English";
+                esContent.forEach(el => el.style.display = "block");
+                enContent.forEach(el => el.style.display = "none");
+            }
+        }
+    </script>
 </head>
 <body>
-    <p>If you are not redirected, <a href="house-rules.pdf">click here</a>.</p>
+    <div class="container">
+        <div class="toggle">
+            <button onclick="toggleLanguage()" id="toggleText">English</button>
+        </div>
+
+        <div class="english-content">
+            <h1>Escape Route Ocean View - House Rules</h1>
+            <p>Welcome to our beachfront getaway! Please review the following information to ensure a smooth stay.</p>
+            
+            <h2>📜 House Rules</h2>
+            <ul>
+                <li>Quiet hours: <strong>11 PM – 7 AM</strong>.</li>
+                <li>No smoking inside or on balconies.</li>
+                <li>Pets allowed in designated areas.</li>
+                <li>Use colored towels for the pool (white towels are not for outdoor use).</li>
+            </ul>
+            
+            <h2>📍 Directions</h2>
+            <ul>
+                <li>Take highway <strong>#52</strong> towards Caguas, then highway <strong>#30</strong> to Humacao.</li>
+                <li>Continue on <strong>#53</strong> from Humacao to Yabucoa.</li>
+                <li>Take scenic road <strong>PR-901</strong> towards Maunabo.</li>
+                <li>Arrive at <strong>Escape Route – Ocean View</strong> in Villas del Faro.</li>
+            </ul>
+            
+            <h2>🍽️ Recommended Restaurants</h2>
+            <ul>
+                <li><a href="https://maps.app.goo.gl/Bhk1SLDszcg6Gm7V9">El Muelle Restaurant Bar & Grill</a></li>
+                <li><a href="https://maps.app.goo.gl/fs8KucQWfhMYU7856">Salmorejo Bar and Grill</a></li>
+                <li><a href="https://maps.app.goo.gl/614tgWA8JSXD1nFU8">El Nuevo Horizonte Restaurant</a></li>
+            </ul>
+        </div>
+        
+        <div class="spanish-content">
+            <h1>Escape Route Ocean View - Reglas de la Casa</h1>
+            <p>¡Bienvenido a nuestra escapada frente al mar! Por favor, revise la siguiente información para garantizar una estancia sin problemas.</p>
+            
+            <h2>📜 Reglas de la Casa</h2>
+            <ul>
+                <li>Horas de silencio: <strong>11 PM – 7 AM</strong>.</li>
+                <li>No fumar dentro o en los balcones.</li>
+                <li>Se permiten mascotas en áreas designadas.</li>
+                <li>Uso de toallas de colores para la piscina (las toallas blancas no son para uso exterior).</li>
+            </ul>
+            
+            <h2>📍 Direcciones</h2>
+            <ul>
+                <li>Tomar la autopista <strong>#52</strong> hacia Caguas, luego la <strong>#30</strong> hasta Humacao.</li>
+                <li>Continuar en la <strong>#53</strong> desde Humacao hasta Yabucoa.</li>
+                <li>Tomar la carretera panorámica <strong>PR-901</strong> hacia Maunabo.</li>
+                <li>Llegar a <strong>Escape Route – Ocean View</strong> en Villas del Faro.</li>
+            </ul>
+            
+            <h2>🍽️ Restaurantes Recomendados</h2>
+            <ul>
+                <li><a href="https://maps.app.goo.gl/Bhk1SLDszcg6Gm7V9">El Muelle Restaurant Bar & Grill</a></li>
+                <li><a href="https://maps.app.goo.gl/fs8KucQWfhMYU7856">Salmorejo Bar and Grill</a></li>
+                <li><a href="https://maps.app.goo.gl/614tgWA8JSXD1nFU8">El Nuevo Horizonte Restaurant</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
